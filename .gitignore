@@ -1,0 +1,30 @@
+# OS / editor cruft
+Thumbs.db
+.DS_Store
+desktop.ini
+*.swp
+*~
+
+# --- Safety guard for this PUBLIC repo -------------------------------------
+# This repo is docs + installer + issues ONLY. These patterns make it hard to
+# ever accidentally commit product source, databases, or config into a public repo.
+*.pas
+*.dpr
+*.dproj
+*.dcu
+*.res
+*.sql
+*.db
+*.db-shm
+*.db-wal
+dbconfig.xml
+tmauth.dat
+RECOVERY-PASSWORD.txt
+*.pem
+*.key
+*.pfx
+
+# The installer itself is distributed via GitHub Releases (an upload asset),
+# not committed to the repo.
+SwanDesk-Setup.exe
+*.exe
