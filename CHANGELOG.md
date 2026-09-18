@@ -4,6 +4,33 @@ Notable changes to the SwanDesk installer. Versions follow a `YYMM.DD.build`
 scheme (e.g. `2607.23.2` = 2026-07, day 23, build 2). Each GitHub
 [release](../../releases) also carries its own notes and download.
 
+## 2609.18.2 — 2026-09-18
+
+All changes in this release are to **AD Password Expiry** *(Enterprise)*.
+
+- **Changed:** The password-reminder email has been redesigned so it no longer
+  looks like a phishing message. It has a fixed subject ("Reminder to change your
+  password"), gives your security policy as the reason instead of warning about
+  lost access, shows details only your IT team would know (the account name and
+  when the password was last changed), says plainly that it contains no links and
+  never asks for a password, and uses your brand color. Unedited reminder
+  templates upgrade automatically; customized ones are left alone.
+- **Fixed:** The reminder subject could read "expires in soon day(s)", and accounts
+  that had already expired were told their password "expires in -5 day(s)". Expired
+  accounts now show their date marked overdue, and accounts that must change their
+  password at next sign-in are told exactly that.
+- **New:** **Password change interval.** For domains where Active Directory never
+  expires passwords, SwanDesk can date each account from its last password change
+  (for example, every 90 days). These dates are marked "policy" and show as
+  *Due soon* or *Overdue*. A real Active Directory expiry always takes precedence.
+- **New:** Any account with an email address can be reminded individually,
+  including accounts whose passwords never expire.
+- **New:** A **Changed** marker shows when someone changed their password after
+  your last reminder, and a **Reminded, not changed yet** filter lists who still
+  needs to act.
+- **Fixed:** Saving the reminder settings updates the account list immediately, and
+  **Remind all expiring** no longer re-sends to people it reminded moments earlier.
+
 ## 2608.31.1 — 2026-08-31
 
 - **Security:** Text submitted by a user could contain template placeholders that
