@@ -4,6 +4,24 @@ Notable changes to the SwanDesk installer. Versions follow a `YYMM.DD.build`
 scheme (e.g. `2607.23.2` = 2026-07, day 23, build 2). Each GitHub
 [release](../../releases) also carries its own notes and download.
 
+## 2609.28.1 — 2026-09-28
+
+- **New:** **Import users from Active Directory.** On a server joined to a
+  Windows domain, administrators get an **Import from AD** button on the Users
+  page. It lists every enabled account in your directory. Tick the people you
+  want, or filter and use **Select all shown**, and SwanDesk creates them as
+  regular users. Their name, email, phone numbers, job title, office and
+  department come from Active Directory. People who are already in SwanDesk are
+  marked and skipped, so importing again is safe. When someone later signs in
+  with their domain account *(Enterprise, External Authentication)*, they get
+  the account that was imported for them.
+- **Fixed:** Email sent to a help desk address through a distribution group
+  (for example, a shared "Help Desk" group in Exchange) now gets the usual
+  acknowledgement. Before, the group's auto-reply settings suppressed it.
+- **New:** Replies are now added to the right ticket even when the subject has
+  no ticket number, such as a Reply All to the original email. SwanDesk matches
+  the email thread itself. This works for tickets that are still open.
+
 ## 2609.18.2 — 2026-09-18
 
 All changes in this release are to **AD Password Expiry** *(Enterprise)*.
