@@ -27,31 +27,28 @@ This release updates the database automatically the first time it starts.
   *(Professional and Enterprise)*. A change can now carry a maintenance window:
   start and end time, a short summary, the expected impact, and the office it
   affects. SwanDesk emails your staff about it, modelled on the maintenance
-  notices internet providers send:
-  - **Announcement** when you save with **Email the announcement now** ticked
-    (it is off by default, because most maintenance doesn't affect anyone).
-  - **Reminders** a set number of days before the start (default 7 and 1), at a
-    set time of day (default 3:00 PM), plus a **final reminder** at that time the
-    day before, or on the day when the work starts later. Never more than one
-    scheduled reminder a day, and none on the day of the announcement.
-  - **Rescheduled** notice when you move an announced window; its reminders are
-    re-planned for the new time.
-  - **Completed** and **Cancelled** notices from the new buttons on the change,
-    sent only if staff were told about it in the first place.
-  - **Emergency** box for unplanned outages: the notice goes out the moment you
-    save, the start can be in the past, the end can be left open ("Until
-    resolved"), and the Completed notice shows when service was restored.
-
-  Notices go **To** the help desk address with your recipients (usually an
-  all-staff distribution group) in **Bcc**, so a "Reply All" reaches only the
-  help desk. A reply becomes an ordinary ticket with a note pointing to the
-  change. Times show your server's time zone (PST/PDT, EST/EDT, ...). The email
-  never includes the change's description, reason or rollback plan, contains no
-  links, and says so. If SwanDesk is not running when a reminder is due, that
-  reminder is skipped rather than sent late. The Change Log list and timeline
-  now show each change's window and status (Scheduled, In progress, Completed,
-  Cancelled). Defaults live in **Settings > Change Log**; the wording can be
-  edited as the "Maintenance notice" email template *(Enterprise)*.
+  notices internet providers send: an **announcement** when you save with
+  **Email the announcement now** ticked (off by default, because most
+  maintenance doesn't affect anyone); **reminders** a set number of days before
+  the start (default 7 and 1) at a set time of day (default 3:00 PM), plus a
+  **final reminder** the day before, never more than one a day; a
+  **Rescheduled** notice when you move an announced window; and **Completed**
+  and **Cancelled** notices from the new buttons on the change, sent only if
+  staff were told about it in the first place. For unplanned outages, the
+  **Emergency** box sends the notice the moment you save, allows a start in the
+  past and an open end ("Until resolved"), and the Completed notice shows when
+  service was restored.
+- **New:** Maintenance notices go **To** the help desk address with your
+  recipients (usually an all-staff distribution group) in **Bcc**, so a
+  "Reply All" reaches only the help desk, and a reply becomes an ordinary
+  ticket with a note pointing to the change. Times show your server's time zone
+  (PST/PDT, EST/EDT, ...). The email never includes the change's description,
+  reason or rollback plan, contains no links, and says so. If SwanDesk is not
+  running when a reminder is due, that reminder is skipped rather than sent
+  late. The Change Log list and timeline now show each change's window and
+  status (Scheduled, In progress, Completed, Cancelled). Defaults live in
+  **Settings > Change Log**; the wording can be edited as the "Maintenance
+  notice" email template *(Enterprise)*.
 - **Fixed:** Saving the password-reminder template (or any template whose event
   isn't a ticket event) in the email template editor silently changed its event
   to "Ticket Updated". The editor now keeps every template's event.
